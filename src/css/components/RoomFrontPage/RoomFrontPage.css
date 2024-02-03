@@ -1,0 +1,198 @@
+/* Main container styling */
+.room-front-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #623E2A;
+    width: 100%;
+    margin-top: 80px;
+    padding-top: 80px;
+}
+
+/* Container for the main content */
+.room-front-page-container {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 80%;
+}
+
+/* Heading style for the room name */
+.room-front-page-container h2 {
+    font-size: 2.5em;
+}
+
+/* Inner container for content with flexible space between items */
+.room-front-page-container-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: auto;
+}
+
+/* Ensuring text doesn't overflow in image description */
+.room-front-page-container-inner * {
+    word-wrap: break-word;
+}
+
+/* Styling for main room image */
+.room-front-page-image {
+    width: 60%;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+/* Styling for the inner section of the room image */
+.room-front-page-image-section-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+/* Styling for the image description */
+.room-front-page-image-description {
+    width: 60%;
+    min-height: 160px;
+    padding: 30px;
+    margin-top: 30px;
+    border: 1px solid #623E2A;
+    display: flex;
+    align-items: center;
+}
+
+/* Styling for the text inside the image description */
+.room-front-page-image-description p {
+    color: #623E2A;
+    text-align: center;
+    word-wrap: break-word;
+}
+
+/* Styling for the second section */
+.room-front-page-second-section {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-top: 120px;
+    width: 80%;
+}
+
+/* Styling for the inner sections of the second section */
+.room-front-page-second-section-inner {
+    width: 40%;
+    height: 100%;
+}
+
+/* Styling for text inside the second section */
+.room-front-page-second-section-inner p {
+    color: #623E2A;
+    text-align: center;
+    word-wrap: break-word;
+    min-height: 160px;
+    padding: 30px;
+    margin-top: 30px;
+    border: 1px solid #623E2A;
+    display: flex;
+    align-items: center;
+}
+
+/* Larger width for the second inner section on bigger screens */
+#room-front-page-second-section-inner-bigger {
+    width: 55%;
+}
+
+/* Styling for the detailed images */
+.room-front-page-image-detailed {
+    min-height: 500px;
+    height: 50%;
+    width: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+/* Adjusting layout for screens larger than 1450px */
+@media (min-width: 1450px) {
+    .room-front-page-container-inner {
+        width: 50%;
+    }
+}
+
+/* Responsive styling for screens up to 1449px width */
+@media (max-width: 1449px) {
+    .room-front-page-image,
+    .room-front-page-image-description {
+        width: 90%;
+    }
+}
+
+/* Responsive styling for screens up to 1000px width */
+@media (max-width: 1000px) {
+    .room-front-page-image-description {
+        width: 80%;
+        padding: 15px;
+    }
+    .room-front-page-container-inner {
+        width: auto;
+    }
+    .room-front-page-image {
+        width: 80%;
+    }
+    .room-front-page-image-detailed {
+        min-height: 250px;
+        -o-object-fit: initial;
+        object-fit: initial;
+    }
+    .room-front-page-second-section-inner p {
+        padding: 15px;
+    }
+}
+
+/* Responsive styling for screens up to 800px width */
+@media (max-width: 800px) {
+    .room-front-page {
+        margin-top: 0;
+        padding-top: 40px;
+    }
+    .room-front-page-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .room-front-page-container-inner {
+        width: 80%;
+    }
+    .room-front-page-container-inner * {
+        text-align: center;
+        line-height: 160%;
+    }
+    .room-front-page-image-section {
+        margin-top: 60px;
+    }
+    .room-front-page-image-section-inner {
+        align-items: center;
+    }
+    .room-front-page-second-section {
+        margin-top: 60px;
+        flex-direction: column;
+        align-items: center;
+    }
+    .room-front-page-second-section-inner,
+    #room-front-page-second-section-inner-bigger {
+        width: 80%;
+        margin-bottom: 60px;
+    }
+}
+
+/* Responsive styling for screens up to 500px width */
+@media (max-width: 500px) {
+    .room-front-page-image,
+    .room-front-page-image-description {
+        width: 100%;
+    }
+    .room-front-page-container-inner {
+        width: auto;
+    }
+    .room-front-page-second-section-inner,
+    #room-front-page-second-section-inner-bigger {
+        width: 100%;
+    }
+}

@@ -1,0 +1,140 @@
+.footer {
+    background-color: #623e2a;
+    width: 100%;
+    color: #f4f1ed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.footer-container {
+    width: 80%;
+    text-align: center;
+}
+
+.footer h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #f4f1ed;
+}
+
+.footer-container-inner {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.contact-container,
+.social-icons-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 150px;
+    width: 300px;
+    margin-bottom: 30px;
+    padding: 20px;
+    border: 1px solid #f4f1ed;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in;
+    transition-delay: 0.5s;
+}
+
+.contact-container.show,
+.social-icons-container.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.contact-container h4,
+.social-icons-container h4 {
+    margin-bottom: 20px;
+}
+
+.contact-container-inner,
+.work-hours-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.contact-icon {
+    margin-right: 15px;
+}
+
+.contact-address-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.work-hours-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.social,
+.social-btn {
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.social:hover,
+.social-btn:hover {
+    background-color: #3e271b;
+    transform: scale(1.1);
+}
+
+.social-btn {
+    color: #f4f1ed;
+    background-color: #623e2a;
+    border: 1px solid #f4f1ed;
+    padding: 15px;
+    width: 100%;
+    border-radius: 20px;
+    font-weight: 500;
+    transition: background-color 0.2s ease-in-out;
+}
+
+@media (max-width: 800px) {
+    .footer {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    .footer h1 {
+        text-align: center;
+    }
+
+    .footer-container-inner {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-container,
+    .social-icons-container {
+        margin-bottom: 20px;
+    }
+
+    .social-btn {
+        margin-top: 20px;
+    }
+}
+
+@media (min-width: 350px) and (max-width: 499px) {
+    .contact-container,
+    .social-icons-container {
+        width: 280px;
+    }
+}
+
+@media (max-width: 349px) {
+    .contact-container,
+    .social-icons-container {
+        width: 250px;
+    }
+}
